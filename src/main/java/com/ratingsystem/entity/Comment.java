@@ -32,15 +32,15 @@ public class Comment {
     @Column(name = "anonymous_email")
     private String anonymousEmail;
 
-    @ManyToOne
-    @JoinColumn(name = "seller_id")
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "seller_id",nullable = false)
     private User seller;
 
     private LocalDateTime createdAt;
     private boolean approved;
 
     @Min(1)
-    @Max(10)
+    @Max(5)
     private int rating;
 
     @PrePersist
