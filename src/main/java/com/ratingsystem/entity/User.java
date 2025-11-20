@@ -1,7 +1,7 @@
 package com.ratingsystem.entity;
 
 
-import com.ratingsystem.Enum.Role;
+import com.ratingsystem.enums.Role;
 import jakarta.persistence.*;
 
 import java.time.LocalDateTime;

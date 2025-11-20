@@ -1,4 +1,4 @@
-package com.ratingsystem.Enum;
+package com.ratingsystem.enums;
 
 public enum Role {
     SELLER, USER, ADMIN

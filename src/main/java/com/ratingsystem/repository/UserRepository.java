@@ -1,6 +1,6 @@
 package com.ratingsystem.repository;
 
-import com.ratingsystem.Enum.Role;
+import com.ratingsystem.enums.Role;
 import com.ratingsystem.entity.User;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
