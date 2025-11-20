@@ -1,11 +1,12 @@
 package com.ratingsystem.repository;
 
 import com.ratingsystem.entity.Comment;
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
 import java.util.List;
 
-public interface CommentRepository {
+public interface CommentRepository  extends JpaRepository<Comment, Integer>  {
 
     //Get all comments os seller
     List<Comment> findBySellerId(Integer sellerId);
@@ -20,7 +21,7 @@ public interface CommentRepository {
     int countBySellerId(Integer sellerId);
 
     //count approved comments
-    int countByApprovedSellerIdAnd(Integer sellerId, boolean approved);
+    int countByApprovedSellerId(Integer sellerId, boolean approved);
 
     //average rating of seller
     @Query("""

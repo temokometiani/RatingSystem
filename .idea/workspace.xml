@@ -5,25 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7b21f69b-cc71-424d-be0d-ec564af91c6d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ratingsystem/dto/request/CommentRequestDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ratingsystem/dto/request/GameObjectRequestDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ratingsystem/dto/request/RegisterRequestDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ratingsystem/dto/request/ResetPassworRequestDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ratingsystem/dto/request/SellerRequestDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ratingsystem/dto/response/CommentResponseDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ratingsystem/dto/response/GameObjectResponseDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ratingsystem/dto/response/SellerResponseDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ratingsystem/service/impl/GameObjectServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ratingsystem/service/impl/RatingServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ratingsystem/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ratingsystem/service/in/GameObjectService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ratingsystem/service/in/RatingService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ratingsystem/service/in/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ratingsystem/dto/request/AuthenticationRequestDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ratingsystem/dto/response/AuthenticationResponseDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ratingsystem/service/impl/SellerServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ratingsystem/service/in/AuthService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ratingsystem/service/in/SellerService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ratingsystem/Enum/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ratingsystem/enums/Role.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ratingsystem/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ratingsystem/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ratingsystem/repository/CommentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ratingsystem/repository/CommentRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ratingsystem/repository/GameObjectRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ratingsystem/repository/GameObjectRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ratingsystem/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ratingsystem/repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ratingsystem/RatingSystemApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ratingsystem/RatingSystemApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ratingsystem/service/impl/GameObjectServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ratingsystem/service/impl/GameObjectServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ratingsystem/service/impl/RatingServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ratingsystem/service/impl/RatingServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ratingsystem/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ratingsystem/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ratingsystem/service/in/GameObjectService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ratingsystem/service/in/GameObjectService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ratingsystem/service/in/RatingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ratingsystem/service/in/RatingService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ratingsystem/service/in/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ratingsystem/service/in/UserService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,15 +58,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.RatingSystemApplication.executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.RatingSystemApplication.executor": "Run",
+    "Docker.docker-compose.yml: Compose Deployment.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main"
   }
-}</component>
+}]]></component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="7b21f69b-cc71-424d-be0d-ec564af91c6d" name="Changes" comment="" />
