@@ -5,22 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7b21f69b-cc71-424d-be0d-ec564af91c6d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ratingsystem/dto/request/AuthenticationRequestDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ratingsystem/dto/response/AuthenticationResponseDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ratingsystem/service/impl/SellerServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ratingsystem/service/in/AuthService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ratingsystem/service/in/SellerService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ratingsystem/repository/CommentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ratingsystem/repository/CommentRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ratingsystem/repository/GameObjectRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ratingsystem/repository/GameObjectRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ratingsystem/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ratingsystem/repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ratingsystem/service/impl/GameObjectServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ratingsystem/service/impl/GameObjectServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ratingsystem/service/impl/RatingServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ratingsystem/service/impl/RatingServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ratingsystem/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ratingsystem/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ratingsystem/service/in/GameObjectService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ratingsystem/service/in/GameObjectService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ratingsystem/service/in/RatingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ratingsystem/service/in/RatingService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ratingsystem/service/in/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ratingsystem/service/in/UserService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
