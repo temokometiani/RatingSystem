@@ -7,15 +7,12 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 public interface GameObjectRepository extends JpaRepository<GameObject, Integer>{
-
-    //Get all game objects of seller
+    // All game objects by seller ID
     List<GameObject> findByUserId(Integer userId);
 
-    //Search by title(case insensivite)
+    // Search by title ignore case
     List<GameObject> findByTitleContainingIgnoreCase(String title);
 
-    //Get all game objects of seller
-    List<GameObject> findByUser (User user);
-
-    List<GameObject> findByUserID(Integer userId);
+    // All objects by User entity
+    List<GameObject> findByUser(User user);
 }

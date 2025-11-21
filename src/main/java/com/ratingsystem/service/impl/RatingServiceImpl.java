@@ -32,7 +32,7 @@ public class RatingServiceImpl implements RatingService {
 
     @Override
     public List<Comment> findByApprovedSellerId(Integer sellerId, boolean approved) {
-        return commentRepository.findByApprovedSellerId(sellerId, approved);
+        return commentRepository.findBySellerIdAndApproved(sellerId, approved);
     }
 
     @Override
@@ -47,7 +47,7 @@ public class RatingServiceImpl implements RatingService {
 
     @Override
     public int countByApprovedSellerIdAnd(Integer sellerId, boolean approved) {
-        return commentRepository.countByApprovedSellerId(sellerId, approved);
+        return commentRepository.countBySellerIdAndApproved(sellerId, approved);
     }
 
     @Override

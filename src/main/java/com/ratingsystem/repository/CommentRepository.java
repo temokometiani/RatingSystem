@@ -7,28 +7,27 @@ import org.springframework.data.jpa.repository.Query;
 import java.util.List;
 
 public interface CommentRepository  extends JpaRepository<Comment, Integer>  {
-
-    //Get all comments os seller
+    // All comments for seller
     List<Comment> findBySellerId(Integer sellerId);
 
-    //get only approved comments of seller
-    List<Comment> findByApprovedSellerId(Integer sellerId, boolean approved);
+    // Only approved comments
+    List<Comment> findBySellerIdAndApproved(Integer sellerId, boolean approved);
 
-
+    // Comments written by AUTHOR
     List<Comment> findByAuthorId(Integer authorId);
 
-    //count all comments
+    // Count all comments for seller
     int countBySellerId(Integer sellerId);
 
-    //count approved comments
-    int countByApprovedSellerId(Integer sellerId, boolean approved);
+    // Count only approved comments
+    int countBySellerIdAndApproved(Integer sellerId, boolean approved);
 
-    //average rating of seller
+    // Average rating
     @Query("""
         SELECT AVG(c.rating)
         FROM Comment c
         WHERE c.seller.id = :sellerId
-        AND c.approved = true
+          AND c.approved = true
     """)
     Double getAverageRatingForSeller(Integer sellerId);
 }
