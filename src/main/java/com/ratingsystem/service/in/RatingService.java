@@ -8,6 +8,7 @@ import java.util.List;
 
 public interface RatingService {
 
+    CommentResponseDto mapToDto(Comment comment);
     List<Comment> findBySellerId(Integer sellerId);
     List<Comment> findByApprovedSellerId(Integer sellerId, boolean approved);
     List<Comment> findByAuthorId(Integer authorId);

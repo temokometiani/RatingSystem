@@ -146,7 +146,7 @@ public class RatingServiceImpl implements RatingService {
     }
 
     // helper
-    private CommentResponseDto mapToDto(Comment comment) {
+    public CommentResponseDto mapToDto(Comment comment) {
         return CommentResponseDto.builder()
                 .id(comment.getId())
                 .message(comment.getMessage())
