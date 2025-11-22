@@ -43,7 +43,7 @@ public class GameObjectController {
     @DeleteMapping("/{objectId}")
     @Operation(summary = "Delete game object by ID (SELLER only)")
     public ResponseEntity<Void> delete(
-            @PathVariable Integer objectId,
+            @PathVariable("objectId") Integer objectId,
             @AuthenticationPrincipal User user) {
 
         log.debug("User {} deleting GameObject {}", user.getId(), objectId);
@@ -58,7 +58,7 @@ public class GameObjectController {
     @PutMapping("/{objectId}")
     @Operation(summary = "Update game object by ID (SELLER only)")
     public ResponseEntity<GameObjectResponseDto> update(
-            @PathVariable Integer objectId,
+            @PathVariable("objectId") Integer objectId,
             @RequestBody GameObjectRequestDto dto,
             @AuthenticationPrincipal User user) {
 
@@ -90,7 +90,7 @@ public class GameObjectController {
     @GetMapping("/search")
     @Operation(summary = "Search game objects by title (public)")
     public ResponseEntity<List<GameObjectResponseDto>> search(
-            @RequestParam String title) {
+            @RequestParam("title") String title) {
 
         log.debug("Searching objects by title '{}'", title);
 
@@ -104,7 +104,7 @@ public class GameObjectController {
     @GetMapping("/seller/{sellerId}")
     @Operation(summary = "Get objects owned by a seller (public)")
     public ResponseEntity<List<GameObjectResponseDto>> getBySeller(
-            @PathVariable Integer sellerId) {
+            @PathVariable("sellerId") Integer sellerId) {
 
         log.debug("Fetching objects for seller {}", sellerId);
 

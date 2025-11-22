@@ -26,10 +26,9 @@ public class AdminController {
     private final RatingService commentService;
 
     // approve seller
-
     @PutMapping("/sellers/{sellerId}/approve")
     @Operation(summary = "Approve seller", description = "Marks seller as approved so they become visible in the system")
-    public ResponseEntity<SellerResponseDto> approveSeller(@PathVariable Integer sellerId) {
+    public ResponseEntity<SellerResponseDto> approveSeller(@PathVariable("sellerId") Integer sellerId) {
         log.debug("Admin requested to approve seller with ID: {}", sellerId);
 
         SellerResponseDto response = sellerService.approveSeller(sellerId);
@@ -42,7 +41,7 @@ public class AdminController {
 
     @PutMapping("/comments/{commentId}/approve")
     @Operation(summary = "Approve comment", description = "Marks comment as approved so it becomes visible to users")
-    public ResponseEntity<CommentResponseDto> approveComment(@PathVariable Integer commentId) {
+    public ResponseEntity<CommentResponseDto> approveComment(@PathVariable("commentId") Integer commentId) {
         log.debug("Admin requested to approve comment with ID: {}", commentId);
 
         CommentResponseDto response = commentService.approveComment(commentId);
@@ -53,7 +52,7 @@ public class AdminController {
 
     @PutMapping("/comments/{commentId}/decline")
     @Operation(summary = "Decline comment", description = "Marks comment as declined so it does not appear to users")
-    public ResponseEntity<CommentResponseDto> declineComment(@PathVariable Integer commentId) {
+    public ResponseEntity<CommentResponseDto> declineComment(@PathVariable("commentId") Integer commentId) {
         log.debug("Admin requested to decline comment with ID: {}", commentId);
 
         CommentResponseDto response = commentService.declineComment(commentId);

@@ -10,4 +10,5 @@ public interface AuthService {
     void sendPasswordResetCode(String email);
     void resetPassword(String code, String newPassword);
     boolean isResetCodeValid(String code);
+    AuthenticationResponseDto registerAdmin(RegisterRequestDto request);
 }

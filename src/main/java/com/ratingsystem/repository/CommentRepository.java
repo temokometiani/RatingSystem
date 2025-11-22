@@ -3,6 +3,7 @@ package com.ratingsystem.repository;
 import com.ratingsystem.entity.Comment;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 
 import java.util.List;
 
@@ -22,12 +23,11 @@ public interface CommentRepository  extends JpaRepository<Comment, Integer>  {
     // Count only approved comments
     int countBySellerIdAndApproved(Integer sellerId, boolean approved);
 
-    // Average rating
     @Query("""
-        SELECT AVG(c.rating)
-        FROM Comment c
-        WHERE c.seller.id = :sellerId
-          AND c.approved = true
-    """)
-    Double getAverageRatingForSeller(Integer sellerId);
+    SELECT AVG(c.rating)
+    FROM Comment c
+    WHERE c.seller.id = :sellerId
+      AND c.approved = true
+""")
+    Double getAverageRatingForSeller(@Param("sellerId") Integer sellerId);
 }

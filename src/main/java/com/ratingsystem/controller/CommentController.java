@@ -50,7 +50,7 @@ public class CommentController {
     // get comment by id
     @GetMapping("/{commentId}")
     @Operation(summary = "Get comment by ID")
-    public ResponseEntity<CommentResponseDto> getCommentById(@PathVariable Integer commentId) {
+    public ResponseEntity<CommentResponseDto> getCommentById(@PathVariable("commentId") Integer commentId) {
 
         log.debug("Fetching comment {}", commentId);
 
@@ -61,10 +61,10 @@ public class CommentController {
     }
 
     // get all comments of seller
-    @GetMapping("/{sellerId}")
+    @GetMapping("bySellerId/{sellerId}")
     public ResponseEntity<List<CommentResponseDto>> getComments(
-            @PathVariable Integer sellerId,
-            @RequestParam(defaultValue = "false") boolean approvedOnly
+            @PathVariable("sellerId") Integer sellerId,
+            @RequestParam(name="approvedOnly",defaultValue = "false") boolean approvedOnly
     ) {
 
         List<Comment> comments = ratingService.findByApprovedSellerId(sellerId, approvedOnly);
@@ -80,7 +80,7 @@ public class CommentController {
     // delete comment
     @DeleteMapping("/{commentId}")
     public ResponseEntity<Void> deleteComment(
-            @PathVariable Integer commentId,
+            @PathVariable("commentId") Integer commentId,
             @AuthenticationPrincipal UserDetails userDetails
     ) {
 

@@ -5,16 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7b21f69b-cc71-424d-be0d-ec564af91c6d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ratingsystem/config/OpenApiConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ratingsystem/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ratingsystem/config/SecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ratingsystem/controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ratingsystem/controller/AdminController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ratingsystem/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ratingsystem/controller/AuthController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ratingsystem/controller/CommentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ratingsystem/controller/CommentController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ratingsystem/controller/GameObjectController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ratingsystem/controller/GameObjectController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ratingsystem/controller/SellerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ratingsystem/controller/SellerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ratingsystem/service/impl/RatingServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ratingsystem/service/impl/RatingServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ratingsystem/service/in/RatingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ratingsystem/service/in/RatingService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ratingsystem/service/impl/RatingServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ratingsystem/service/impl/RatingServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ratingsystem/service/in/RatingService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ratingsystem/service/in/RatingService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ratingsystem/repository/CommentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ratingsystem/repository/CommentRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ratingsystem/service/impl/AuthServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ratingsystem/service/impl/AuthServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ratingsystem/service/in/AuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ratingsystem/service/in/AuthService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ratingsystem/service/in/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ratingsystem/service/in/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ratingsystem/config/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ratingsystem/config/SecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ratingsystem/controller/AdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ratingsystem/controller/AdminController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ratingsystem/controller/AuthController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ratingsystem/controller/AuthController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ratingsystem/controller/CommentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ratingsystem/controller/CommentController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ratingsystem/controller/GameObjectController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ratingsystem/controller/GameObjectController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ratingsystem/controller/SellerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ratingsystem/controller/SellerController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ratingsystem/repository/CommentRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ratingsystem/repository/CommentRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ratingsystem/service/impl/AuthServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ratingsystem/service/impl/AuthServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ratingsystem/service/in/AuthService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ratingsystem/service/in/AuthService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +66,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Application.RatingSystemApplication.executor": "Run",
+    "Application.RatingSystemApplication.executor": "Debug",
     "Docker.docker-compose.yml: Compose Deployment.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -62,6 +74,26 @@
     "git-widget-placeholder": "main"
   }
 }]]></component>
+  <component name="RunManager">
+    <configuration name="RatingSystemApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.ratingsystem.RatingSystemApplication" />
+      <module name="RatingSystem2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ratingsystem.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.RatingSystemApplication" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="7b21f69b-cc71-424d-be0d-ec564af91c6d" name="Changes" comment="" />
@@ -71,5 +103,71 @@
       <updated>1763113161179</updated>
     </task>
     <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/ratingsystem/controller/AdminController.java</url>
+          <line>31</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/ratingsystem/service/impl/SellerServiceImpl.java</url>
+          <line>103</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/ratingsystem/service/impl/AuthServiceImpl.java</url>
+          <line>76</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/ratingsystem/service/impl/AuthServiceImpl.java</url>
+          <line>84</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/ratingsystem/controller/AuthController.java</url>
+          <line>54</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/ratingsystem/controller/GameObjectController.java</url>
+          <line>64</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/ratingsystem/controller/GameObjectController.java</url>
+          <line>94</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/ratingsystem/service/impl/SellerServiceImpl.java</url>
+          <line>93</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/ratingsystem/controller/CommentController.java</url>
+          <line>69</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/ratingsystem/controller/CommentController.java</url>
+          <line>38</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/ratingsystem/controller/CommentController.java</url>
+          <line>86</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/ratingsystem/service/impl/AuthServiceImpl.java</url>
+          <line>42</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

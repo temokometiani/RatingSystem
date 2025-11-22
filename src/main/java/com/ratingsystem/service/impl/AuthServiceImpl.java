@@ -129,4 +129,33 @@ public class AuthServiceImpl implements AuthService {
         return redisService.getEmailByResetCode(code) != null;
     }
 
+    @Override
+    public AuthenticationResponseDto registerAdmin(RegisterRequestDto request) {
+        if (userRepository.findByEmail(request.getEmail()).isPresent()) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Email already in use");
+        }
+
+        User user = User.builder()
+                .firstName(request.getFirstName())
+                .lastName(request.getLastName())
+                .email(request.getEmail())
+                .password(passwordEncoder.encode(request.getPassword()))
+                .role(Role.ADMIN)
+                .emailConfirmed(true)
+                .approved(true)
+                .build();
+
+        userRepository.save(user);
+
+        String code = UUID.randomUUID().toString();
+        redisService.saveConfirmationCode(request.getEmail(), code);
+
+        log.info("EMAIL CONFIRM LINK: http://localhost:8081/api/auth/confirm?email={}&code={}",
+                request.getEmail(), code);
+
+        return AuthenticationResponseDto.builder()
+                .token(jwtService.generateToken(user))
+                .build();
+    }
+
 }

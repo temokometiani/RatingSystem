@@ -39,7 +39,7 @@ public class SellerController {
     @GetMapping
     @Operation(summary = "Get all sellers (public). Optionally only approved sellers.")
     public ResponseEntity<List<SellerResponseDto>> getAllSellers(
-            @RequestParam(defaultValue = "false") boolean approvedOnly) {
+            @RequestParam(name = "approvedOnly", defaultValue = "false") boolean approvedOnly) {
 
         log.debug("Fetching all sellers. approvedOnly={}", approvedOnly);
 
@@ -53,9 +53,9 @@ public class SellerController {
     @GetMapping("/filter")
     @Operation(summary = "Filter sellers by game title and rating range (public)")
     public ResponseEntity<List<SellerResponseDto>> filterSellers(
-            @RequestParam String gameTitle,
-            @RequestParam Double minRating,
-            @RequestParam Double maxRating) {
+            @RequestParam("gameTitle") String gameTitle,
+            @RequestParam("minRating") Double minRating,
+            @RequestParam("maxRating") Double maxRating) {
 
         log.debug("Filtering sellers: title='{}', min={}, max={}",
                 gameTitle, minRating, maxRating);
@@ -70,7 +70,7 @@ public class SellerController {
     //get seller rating
     @GetMapping("/{sellerId}/rating")
     @Operation(summary = "Get average rating of seller (public)")
-    public ResponseEntity<Double> getSellerRating(@PathVariable Integer sellerId) {
+    public ResponseEntity<Double> getSellerRating(@PathVariable("sellerId") Integer sellerId) {
 
         log.debug("Fetching rating for seller {}", sellerId);
 
@@ -84,7 +84,7 @@ public class SellerController {
     @GetMapping("/top")
     @Operation(summary = "Get top sellers by rating (public)")
     public ResponseEntity<List<SellerResponseDto>> getTopSellers(
-            @RequestParam(defaultValue = "3") int limit) {
+            @RequestParam(name = "limit",defaultValue = "3") int limit) {
 
         log.debug("Fetching top {} sellers", limit);
 

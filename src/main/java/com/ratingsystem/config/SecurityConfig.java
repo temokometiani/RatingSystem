@@ -41,32 +41,50 @@ public class SecurityConfig {
 
                 .authorizeHttpRequests(auth -> auth
 
-                        // Swagger
-                        .requestMatchers(SWAGGER_WHITELIST).permitAll()
+                                // Swagger
+                                .requestMatchers(SWAGGER_WHITELIST).permitAll()
 
-                        // Auth
-                        .requestMatchers("/api/auth/**").permitAll()
+                                // Auth
+                                .requestMatchers("/api/auth/**").permitAll()
 
-                        // Public GETs
-                        .requestMatchers(HttpMethod.GET,
-                                "/api/sellers",
-                                "/api/sellers/top",
-                                "/api/comments/seller/**",
-                                "/api/objects"
-                        ).permitAll()
+                                // Public GETs
+                                .requestMatchers(HttpMethod.GET,
+                                        "/api/objects/**"
+                                ).permitAll()
 
-                        .requestMatchers(HttpMethod.POST, "/api/comments").permitAll()
+                                .requestMatchers(HttpMethod.GET,
+                                        "/api/sellers/**"
+                                ).permitAll()
 
-                        // Seller
-                        .requestMatchers(HttpMethod.POST, "/api/objects").hasAuthority("SELLER")
-                        .requestMatchers(HttpMethod.PUT, "/api/objects/**").hasAuthority("SELLER")
-                        .requestMatchers(HttpMethod.DELETE, "/api/objects/**").hasAuthority("SELLER")
+                                .requestMatchers(HttpMethod.GET,
+                                        "/api/comments/**"
+                                ).permitAll()
+                                .requestMatchers(HttpMethod.POST,
+                                        "/api/comments/**"
+                                ).permitAll().requestMatchers(HttpMethod.DELETE,
+                                        "/api/comments/**"
+                                ).permitAll()
 
-                        // Admin
-                        .requestMatchers("/api/admin/**").hasAuthority("ADMIN")
+//
+//                                .requestMatchers(HttpMethod.GET,
+//                                        "/api/sellers/**"
+//                                ).permitAll()
 
-                        // anything else
-                        .anyRequest().authenticated()
+
+//                        .requestMatchers(HttpMethod.GET, "/api/objects/**").permitAll()
+
+                                .requestMatchers(HttpMethod.POST, "/api/comments/**").permitAll()
+
+                                // Seller
+                                .requestMatchers(HttpMethod.POST, "/api/objects").hasRole("SELLER")
+                                .requestMatchers(HttpMethod.PUT, "/api/objects/**").hasRole("SELLER")
+                                .requestMatchers(HttpMethod.DELETE, "/api/objects/**").hasRole("SELLER")
+
+                                // Admin
+                                .requestMatchers("/api/admin/**").hasRole("ADMIN")
+
+                                // anything else
+                                .anyRequest().authenticated()
                 )
 
                 .authenticationProvider(authenticationProvider)

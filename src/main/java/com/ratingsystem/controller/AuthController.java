@@ -47,6 +47,24 @@ public class AuthController {
         }
     }
 
+    // registration
+    @PostMapping("/registerAdmin")
+    @Operation(summary = "Register new user",
+            description = "Creates a new user account and sends an email confirmation code")
+    public ResponseEntity<AuthenticationResponseDto> registerAdmin(@RequestBody RegisterRequestDto request) {
+        log.info("Register request for email: {}", request.getEmail());
+
+        try {
+            AuthenticationResponseDto response = authService.registerAdmin(request);
+            log.info("User registered successfully: {}", request.getEmail());
+            return ResponseEntity.ok(response);
+
+        } catch (Exception ex) {
+            log.error("Registration failed for {}: {}", request.getEmail(), ex.getMessage());
+            throw ex;
+        }
+    }
+
     // login
     @PostMapping("/authenticate")
     @Operation(summary = "Authenticate user (Login)",
@@ -72,8 +90,8 @@ public class AuthController {
     @Operation(summary = "Confirm email address",
             description = "Validates the confirmation code sent to the user's email")
     public ResponseEntity<String> confirmEmail(
-            @RequestParam String email,
-            @RequestParam String code) {
+            @RequestParam("email") String email,
+            @RequestParam("code") String code) {
 
         log.info("Email confirmation attempt for {}", email);
 
@@ -102,7 +120,7 @@ public class AuthController {
     @PostMapping("/forgot_password")
     @Operation(summary = "Request password reset",
             description = "Sends a reset code to the user's email")
-    public ResponseEntity<String> forgotPassword(@RequestParam String email) {
+    public ResponseEntity<String> forgotPassword(@RequestParam("email") String email) {
         log.info("Password reset requested for {}", email);
 
         authService.sendPasswordResetCode(email);
@@ -126,7 +144,7 @@ public class AuthController {
     @GetMapping("/check_code")
     @Operation(summary = "Validate reset code",
             description = "Checks if the reset code is valid or expired")
-    public ResponseEntity<String> checkResetCode(@RequestParam String code) {
+    public ResponseEntity<String> checkResetCode(@RequestParam("code") String code) {
 
         log.debug("Checking reset code {}", code);
 

@@ -6,9 +6,7 @@ import com.ratingsystem.dto.response.AuthenticationResponseDto;
 import com.ratingsystem.entity.User;
 
 public interface UserService {
-
     User findByEmail(String email);
     User findById(Integer id);
-
 }
 
