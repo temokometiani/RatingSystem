@@ -86,7 +86,7 @@ public class GameObjectController {
         return ResponseEntity.ok(objects);
     }
 
-    // search game object bt title
+    // search game object by title
     @GetMapping("/search")
     @Operation(summary = "Search game objects by title (public)")
     public ResponseEntity<List<GameObjectResponseDto>> search(

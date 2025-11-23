@@ -48,7 +48,7 @@ public class CommentController {
     }
 
     // get comment by id
-    @GetMapping("/{commentId}")
+    @GetMapping("byCommentId/{commentId}")
     @Operation(summary = "Get comment by ID")
     public ResponseEntity<CommentResponseDto> getCommentById(@PathVariable("commentId") Integer commentId) {
 
@@ -67,12 +67,8 @@ public class CommentController {
             @RequestParam(name="approvedOnly",defaultValue = "false") boolean approvedOnly
     ) {
 
-        List<Comment> comments = ratingService.findByApprovedSellerId(sellerId, approvedOnly);
+        List<CommentResponseDto> dtoList = ratingService.findByApprovedSellerId(sellerId, approvedOnly);
 
-        // Cocvert manually
-        List<CommentResponseDto> dtoList = comments.stream()
-                .map(ratingService::mapToDto)
-                .collect(Collectors.toList());
 
         return ResponseEntity.ok(dtoList);
     }

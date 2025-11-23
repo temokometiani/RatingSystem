@@ -7,11 +7,9 @@ import com.ratingsystem.entity.Comment;
 import java.util.List;
 
 public interface RatingService {
-
-    CommentResponseDto mapToDto(Comment comment);
-    List<Comment> findBySellerId(Integer sellerId);
-    List<Comment> findByApprovedSellerId(Integer sellerId, boolean approved);
-    List<Comment> findByAuthorId(Integer authorId);
+    List<CommentResponseDto> findBySellerId(Integer sellerId);
+    List<CommentResponseDto> findByApprovedSellerId(Integer sellerId, boolean approved);
+    List<CommentResponseDto> findByAuthorId(Integer authorId);
     int countBySellerId(Integer sellerId);
     int countByApprovedSellerIdAnd(Integer sellerId, boolean approved);
     Double getAverageRatingForSeller(Integer sellerId);
@@ -20,6 +18,4 @@ public interface RatingService {
     CommentResponseDto approveComment(Integer commentId);
     CommentResponseDto declineComment(Integer commentId);
     void deleteComment(Integer commentId, Integer userId);
-
-
 }

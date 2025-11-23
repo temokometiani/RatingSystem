@@ -16,6 +16,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
@@ -26,18 +27,18 @@ public class RatingServiceImpl implements RatingService {
     private final SellerService sellerService;
 
     @Override
-    public List<Comment> findBySellerId(Integer sellerId) {
-        return commentRepository.findBySellerId(sellerId);
+    public List<CommentResponseDto> findBySellerId(Integer sellerId) {
+        return commentRepository.findBySellerId(sellerId).stream().map(this::mapToDto).collect(Collectors.toList());
     }
 
     @Override
-    public List<Comment> findByApprovedSellerId(Integer sellerId, boolean approved) {
-        return commentRepository.findBySellerIdAndApproved(sellerId, approved);
+    public List<CommentResponseDto> findByApprovedSellerId(Integer sellerId, boolean approved) {
+        return commentRepository.findBySellerIdAndApproved(sellerId, approved).stream().map(this::mapToDto).collect(Collectors.toList());
     }
 
     @Override
-    public List<Comment> findByAuthorId(Integer authorId) {
-        return commentRepository.findByAuthorId(authorId);
+    public List<CommentResponseDto> findByAuthorId(Integer authorId) {
+        return commentRepository.findByAuthorId(authorId).stream().map(this::mapToDto).collect(Collectors.toList());
     }
 
     @Override
@@ -146,7 +147,7 @@ public class RatingServiceImpl implements RatingService {
     }
 
     // helper
-    public CommentResponseDto mapToDto(Comment comment) {
+    private CommentResponseDto mapToDto(Comment comment) {
         return CommentResponseDto.builder()
                 .id(comment.getId())
                 .message(comment.getMessage())

@@ -65,6 +65,8 @@ public class SecurityConfig {
                                         "/api/comments/**"
                                 ).permitAll()
 
+ //                               .requestMatchers(HttpMethod.POST, "/api/sellers/**").permitAll()
+
 //
 //                                .requestMatchers(HttpMethod.GET,
 //                                        "/api/sellers/**"
