@@ -5,17 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7b21f69b-cc71-424d-be0d-ec564af91c6d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/DBSchema.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/ratingsystem/integration/GameObjectControllerIntegrationTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/ratingsystem/unit/RatingServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/ratingsystem/unit/SellerServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ratingsystem/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ratingsystem/config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ratingsystem/controller/CommentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ratingsystem/controller/CommentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ratingsystem/controller/GameObjectController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ratingsystem/controller/GameObjectController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ratingsystem/service/impl/RatingServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ratingsystem/service/impl/RatingServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ratingsystem/service/in/RatingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ratingsystem/service/in/RatingService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/ratingsystem/config/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ratingsystem/config/SecurityConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ratingsystem/controller/CommentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ratingsystem/controller/CommentController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ratingsystem/service/impl/AuthServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ratingsystem/service/impl/AuthServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ratingsystem/service/impl/RatingServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ratingsystem/service/impl/RatingServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ratingsystem/service/in/RatingService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ratingsystem/service/in/RatingService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,13 +53,16 @@
   "keyToString": {
     "Application.RatingSystemApplication.executor": "Debug",
     "Docker.docker-compose.yml: Compose Deployment.executor": "Run",
+    "JUnit.GameObjectControllerIntegrationTest.executor": "Run",
+    "JUnit.RatingServiceTest.executor": "Run",
+    "JUnit.SellerServiceTest.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "main"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.GameObjectControllerIntegrationTest">
     <configuration name="RatingSystemApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.ratingsystem.RatingSystemApplication" />
       <module name="RatingSystem2" />
@@ -77,8 +76,56 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="GameObjectControllerIntegrationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="RatingSystem2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ratingsystem.integration.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.ratingsysytem.integration" />
+      <option name="MAIN_CLASS_NAME" value="com.ratingsystem.integration.GameObjectControllerIntegrationTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RatingServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="RatingSystem2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ratingsystem.unit.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.ratingsystem.unit" />
+      <option name="MAIN_CLASS_NAME" value="com.ratingsystem.unit.RatingServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SellerServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="RatingSystem2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ratingsystem.unit.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.ratingsystem.unit" />
+      <option name="MAIN_CLASS_NAME" value="com.ratingsystem.unit.SellerServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.GameObjectControllerIntegrationTest" />
+        <item itemvalue="JUnit.SellerServiceTest" />
+        <item itemvalue="JUnit.RatingServiceTest" />
         <item itemvalue="Application.RatingSystemApplication" />
       </list>
     </recent_temporary>
