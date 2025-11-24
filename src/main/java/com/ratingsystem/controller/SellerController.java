@@ -23,7 +23,7 @@ public class SellerController {
 
     // create seller
     @PostMapping
-    @Operation(summary = "Create new seller (ADMIN only)")
+    @Operation(summary = "Create new seller ")
     public ResponseEntity<SellerResponseDto> createSeller(
             @RequestBody SellerRequestDto dto) {
 

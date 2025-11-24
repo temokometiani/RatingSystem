@@ -47,7 +47,7 @@ public class AuthController {
         }
     }
 
-    // registration
+    // registration Admin
     @PostMapping("/registerAdmin")
     @Operation(summary = "Register new user",
             description = "Creates a new user account and sends an email confirmation code")
@@ -95,22 +95,9 @@ public class AuthController {
 
         log.info("Email confirmation attempt for {}", email);
 
-        String storedCode = redisService.getConfirmationCode(email);
+        authService.confirmEmail(email,code);
 
-        if (storedCode == null || !storedCode.equals(code)) {
-            log.warn("Invalid confirmation code for {}", email);
-            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Invalid or expired confirmation code");
-        }
 
-        User user = userRepository.findByEmail(email)
-                .orElseThrow(() -> {
-                    log.warn("User not found during confirmation: {}", email);
-                    return new ResponseStatusException(HttpStatus.NOT_FOUND, "User not found");
-                });
-
-        user.setEmailConfirmed(true);
-        userRepository.save(user);
-        redisService.deleteConfirmationCode(email);
 
         log.info("Email confirmed for {}", email);
         return ResponseEntity.ok("Email confirmed successfully");

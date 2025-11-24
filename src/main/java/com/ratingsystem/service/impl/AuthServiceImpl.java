@@ -14,6 +14,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -156,6 +157,29 @@ public class AuthServiceImpl implements AuthService {
         return AuthenticationResponseDto.builder()
                 .token(jwtService.generateToken(user))
                 .build();
+    }
+
+    @Override
+    public boolean confirmEmail(String email, String code) {
+
+        String storedCode = redisService.getConfirmationCode(email);
+
+        if (storedCode == null || !storedCode.equals(code)) {
+            log.warn("Invalid confirmation code for {}", email);
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Invalid or expired confirmation code");
+        }
+
+        User user = userRepository.findByEmail(email)
+                .orElseThrow(() -> {
+                    log.warn("User not found during confirmation: {}", email);
+                    return new ResponseStatusException(HttpStatus.NOT_FOUND, "User not found");
+                });
+
+        user.setEmailConfirmed(true);
+        userRepository.save(user);
+        redisService.deleteConfirmationCode(email);
+
+        return true;
     }
 
 }
