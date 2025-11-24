@@ -94,4 +94,16 @@ class GameObjectControllerIntegrationTest {
                 .andExpect(jsonPath("$[0].userId").value(seller.getId()))
                 .andExpect(jsonPath("$[0].userName").value("temo kometiani"));
     }
+
+    //tested
+    /*
+    A seller is created
+    A game object is created and assigned to that seller
+    When hitting /api/objects, the system returns a list of game objects
+    The JSON contains correct:title,text,sellerId,seller full name
+    Database interaction works
+    Repository works
+    DTO serialization works
+    Request → controller → service → repository → database → DTO → JSON works end-to-end
+     */
 }

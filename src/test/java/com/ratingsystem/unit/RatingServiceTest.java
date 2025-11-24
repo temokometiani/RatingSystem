@@ -75,4 +75,14 @@ class RatingServiceTest {
         assertEquals(25, response.getAuthorId());
         assertFalse(response.isApproved());
     }
+
+    //tested
+    /*
+     Returned response is not null
+     Returned id matches saved entity
+     Message matches input
+     Rating matches input
+     Author ID matches input
+     approved defaults to false
+     */
 }

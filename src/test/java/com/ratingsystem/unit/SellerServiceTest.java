@@ -93,4 +93,16 @@ class SellerServiceTest {
         assertEquals("Lionel", result.get(1).getFirstName());
         assertEquals("Anna", result.get(2).getFirstName());
     }
+
+    //tested
+    /*
+    Sellers are fetched from the repository
+    Average rating per seller is fetched
+    Comment count per seller is fetched
+    Sorting occurs in descending order by rating
+    Returned DTO contains correct fields
+    userRepository returns list of sellers
+    commentRepository returns fake ratings
+    sellerService sorts sellers by rating
+     */
 }
